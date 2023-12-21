@@ -19,14 +19,11 @@ namespace realizzatore_di_tornei
     /// </summary>
     public partial class addSquadra : Window
     {
-        private Squadra sq;
+        public Squadra sq;
         public addSquadra()
         {
             InitializeComponent();
         }
-
-        public Squadra Sq { get => sq; set => sq = value; }
-
         private void creaSquadra_btn_Click(object sender, RoutedEventArgs e)
         {
             bool isValido = false;
@@ -47,8 +44,10 @@ namespace realizzatore_di_tornei
                     }
                     if (isValido)
                     {
+                        MessageBox.Show("Creo la squadra");
+
                         Squadra s = new Squadra(nomeSq_txtbox.Text, Int32.Parse(nMembri_txtbox.Text));
-                        Sq = s;
+                        this.sq = s;
                     }
                 }
                 else
@@ -59,9 +58,5 @@ namespace realizzatore_di_tornei
                 MessageBox.Show("Inserire il nome alla Squadra");
         }
 
-        public override string ToString()
-        {
-            return nomeSq_txtbox.Text;
-        }
     }
 }

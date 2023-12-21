@@ -20,8 +20,7 @@ namespace realizzatore_di_tornei
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        List <Squadra> squadraList;
+        List <Squadra> squadraList = new List<Squadra>();
         public MainWindow()
         {
             InitializeComponent();
@@ -37,15 +36,15 @@ namespace realizzatore_di_tornei
 
             a.ShowDialog();
 
-            listbox_squadre.Items.Add(a.Sq);
-            squadraList.Add(a.Sq);
+            listbox_squadre.Items.Add(a.sq);
+            squadraList.Add(a.sq);
             this.Show();
         }
 
         private void listbox_squadre_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            nome_torneo_txtbox.Text = squadraList.ElementAt(listbox_squadre.SelectedIndex).Nome;
-            n_squadre_txtbox.Text = squadraList.ElementAt(listbox_squadre.SelectedIndex).NMembri.ToString();
+            nome_squadra_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].Nome;
+            n_squadre_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].NMembri.ToString();
         }
     }
 }

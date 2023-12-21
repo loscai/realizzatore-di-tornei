@@ -19,5 +19,10 @@ namespace realizzatore_di_tornei
             this.nMembri = nMembri;
         }
 
+        public override string ToString()
+        {
+            return nome;
+        }
+
     }
 }

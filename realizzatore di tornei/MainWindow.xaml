@@ -11,10 +11,10 @@
         <Button x:Name="add_sq_button" Content="Aggiungi Squadra" HorizontalAlignment="Left" Height="48" Margin="193,10,0,0" VerticalAlignment="Top" Width="122" Click="add_sq_button_Click"/>
         <Label Content="Nome competizione:" HorizontalAlignment="Left" Height="24" Margin="360,10,0,0" VerticalAlignment="Top" Width="130"/>
         <TextBox x:Name="nome_torneo_txtbox" HorizontalAlignment="Left" Margin="490,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16"/>
-        <Label Content="Numero di memrbi:" HorizontalAlignment="Left" Height="24" Margin="202,140,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Numero di membri:" HorizontalAlignment="Left" Height="24" Margin="202,140,0,0" VerticalAlignment="Top" Width="110"/>
         <TextBox x:Name="n_squadre_txtbox" HorizontalAlignment="Left" Margin="317,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16" IsReadOnly="True"/>
         <Label Content="Nome Squadra:" HorizontalAlignment="Left" Height="24" Margin="220,107,0,0" VerticalAlignment="Top" Width="95"/>
-        <TextBox x:Name="nome_torneo_txtbox_Copy1" HorizontalAlignment="Left" Margin="317,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="16" IsReadOnly="True"/>
+        <TextBox x:Name="nome_squadra_txtbox" HorizontalAlignment="Left" Margin="317,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="16" IsReadOnly="True"/>
         <RadioButton x:Name="radio_btn_gironi" Content="Gironi" HorizontalAlignment="Left" Margin="220,204,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radio_btn_tabellone" Content="Tabellone" HorizontalAlignment="Left" Margin="220,224,0,0" VerticalAlignment="Top"/>
 
