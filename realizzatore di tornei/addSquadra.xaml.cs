@@ -44,10 +44,9 @@ namespace realizzatore_di_tornei
                     }
                     if (isValido)
                     {
-                        MessageBox.Show("Creo la squadra");
-
                         Squadra s = new Squadra(nomeSq_txtbox.Text, Int32.Parse(nMembri_txtbox.Text));
                         this.sq = s;
+                        this.Close();
                     }
                 }
                 else
@@ -57,6 +56,5 @@ namespace realizzatore_di_tornei
             else
                 MessageBox.Show("Inserire il nome alla Squadra");
         }
-
     }
 }
