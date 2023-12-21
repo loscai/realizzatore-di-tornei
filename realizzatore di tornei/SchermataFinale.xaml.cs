@@ -21,6 +21,10 @@ namespace realizzatore_di_tornei
     {
         const int salto = 5; //spazio tra un tasto e l'altro
 
+        int nCaselleTotali;
+
+        Button[] caselle;
+
         int nSquadre;
         List<Squadra> squadraList;
         bool isTabellone;
@@ -33,7 +37,24 @@ namespace realizzatore_di_tornei
             this.nSquadre = nSquadre;
             this.isTabellone = isTabellone;
 
+            this.nCaselleTotali = (nSquadre*2) - 1;
 
+            caselle = new Button[nCaselleTotali];
+
+            for(int i = 0; i < caselle.Length; i++)
+            {
+                if(i < nSquadre)
+                {
+                    caselle[i] = new Button();
+                    caselle[i].Content = squadraList[i].Nome;
+                }
+                else
+                {
+                    caselle[i] = new Button();
+                    caselle[i].Content = string.Empty;
+                }
+                
+            }
         }
     }
 }

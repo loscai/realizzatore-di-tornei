@@ -15,11 +15,15 @@ using System.Windows.Shapes;
 
 namespace realizzatore_di_tornei
 {
+    //https://github.com/loscai/realizzatore-di-tornei
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
+        const int maxNumeSquadre = 32;
         List <Squadra> squadraList = new List<Squadra>();
         public MainWindow()
         {
@@ -30,15 +34,22 @@ namespace realizzatore_di_tornei
 
         private void add_sq_button_Click(object sender, RoutedEventArgs e)
         {
-            addSquadra a = new addSquadra();
+            if (listbox_squadre.Items.Count < maxNumeSquadre)
+            {
+                addSquadra a = new addSquadra();
 
-            this.Hide();
+                this.Hide();
 
-            a.ShowDialog();
+                a.ShowDialog();
 
-            listbox_squadre.Items.Add(a.sq);
-            squadraList.Add(a.sq);
-            this.Show();
+                listbox_squadre.Items.Add(a.sq);
+                squadraList.Add(a.sq);
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Numero Massimo di squadre raggiunto");
+            }
         }
 
         private void listbox_squadre_SelectionChanged(object sender, SelectionChangedEventArgs e)
