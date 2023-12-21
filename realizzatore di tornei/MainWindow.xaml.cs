@@ -51,10 +51,17 @@ namespace realizzatore_di_tornei
         private void avvia_btn_Click(object sender, RoutedEventArgs e)
         {
             //controllo che il campo del testo del torneo non sia vuoto e che nella lista ci siano almeno 4 teams
-            if(nome_torneo_txtbox.Text != string.Empty && listbox_squadre.Items.Count > 3)
+            if(nome_torneo_txtbox.Text != string.Empty && listbox_squadre.Items.Count > 3 && listbox_squadre.Items.Count % 4 == 0)
             {
-                SchermataFinale sf = new SchermataFinale(nome_torneo_txtbox.Text);
-
+                SchermataFinale sf;
+                if (radio_btn_gironi.IsChecked == true)
+                {
+                    sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList,false);
+                }
+                else
+                {
+                    sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, true);
+                }
                 this.Hide();
 
                 sf.ShowDialog();
@@ -73,7 +80,16 @@ namespace realizzatore_di_tornei
             {
                 MessageBox.Show("Bisogna inserire almeno 4 squadre");
             }
+            else if(listbox_squadre.Items.Count % 4 != 0)
+            {
+                MessageBox.Show("Il numero di squadre deve essere pari e divisibili per 4");
+            }
+        }
+
+        private void elimina_btn_Click(object sender, RoutedEventArgs e)
+        {
+            listbox_squadre.SelectedItem = null;
+            squadraList[listbox_squadre.SelectedIndex] = null;
         }
     }
 }
-

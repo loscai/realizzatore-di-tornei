@@ -19,11 +19,21 @@ namespace realizzatore_di_tornei
     /// </summary>
     public partial class SchermataFinale : Window
     {
-        public SchermataFinale(String titolo)
+        const int salto = 5; //spazio tra un tasto e l'altro
+
+        int nSquadre;
+        List<Squadra> squadraList;
+        bool isTabellone;
+        public SchermataFinale(String titolo, int nSquadre, List<Squadra> squadraList, bool isTabellone)
         {
             InitializeComponent();
 
             this.Title = titolo;
+            this.squadraList = squadraList;
+            this.nSquadre = nSquadre;
+            this.isTabellone = isTabellone;
+
+
         }
     }
 }

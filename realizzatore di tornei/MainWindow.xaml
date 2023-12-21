@@ -18,7 +18,7 @@
         <RadioButton x:Name="radio_btn_gironi" Content="Gironi" HorizontalAlignment="Left" Margin="220,204,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radio_btn_tabellone" Content="Tabellone" HorizontalAlignment="Left" Margin="220,224,0,0" VerticalAlignment="Top"/>
         <Button x:Name="avvia_btn" Content="Avvia" HorizontalAlignment="Left" Margin="508,332,0,0" VerticalAlignment="Top" Height="68" Width="126" Click="avvia_btn_Click"/>
-        <Button x:Name="elimina_btn" Content="Elimina squadra" HorizontalAlignment="Left" Margin="202,283,0,0" VerticalAlignment="Top" Height="50" Width="113" IsEnabled="False"/>
+        <Button x:Name="elimina_btn" Content="Elimina squadra" HorizontalAlignment="Left" Margin="202,283,0,0" VerticalAlignment="Top" Height="50" Width="113" IsEnabled="False" Click="elimina_btn_Click"/>
 
     </Grid>
 </Window>
