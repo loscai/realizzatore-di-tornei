@@ -1,1 +1,4 @@
-# realizzatore di tornei
+# REALIZZATORE DI TORNEI
+
+## Autore: Colombo Christian
+
