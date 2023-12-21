@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "realizzatore di tornei", "realizzatore di tornei\realizzatore di tornei.csproj", "{0E5FE0E2-9EA7-4D26-A890-042309DA1D4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E5FE0E2-9EA7-4D26-A890-042309DA1D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5FE0E2-9EA7-4D26-A890-042309DA1D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5FE0E2-9EA7-4D26-A890-042309DA1D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5FE0E2-9EA7-4D26-A890-042309DA1D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BC6E7B6-211F-47BB-AB18-E85FB202D26F}
+	EndGlobalSection
+EndGlobal

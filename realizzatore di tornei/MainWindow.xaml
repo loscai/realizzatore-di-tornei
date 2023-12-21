@@ -1,0 +1,22 @@
+﻿<Window x:Class="realizzatore_di_tornei.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:realizzatore_di_tornei"
+        mc:Ignorable="d"
+        Title="Realizzatore di tornei by Christian Colombo®" Height="450" Width="800">
+    <Grid Background="#FFAAC6D2">
+        <ListBox x:Name="listbox_squadre" HorizontalAlignment="Left" Height="414" VerticalAlignment="Center" Width="188" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="Black" BorderThickness="1,1,10,1" Background="#FFAAC6D2" SelectionChanged="listbox_squadre_SelectionChanged"/>
+        <Button x:Name="add_sq_button" Content="Aggiungi Squadra" HorizontalAlignment="Left" Height="48" Margin="193,10,0,0" VerticalAlignment="Top" Width="122" Click="add_sq_button_Click"/>
+        <Label Content="Nome competizione:" HorizontalAlignment="Left" Height="24" Margin="360,10,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="nome_torneo_txtbox" HorizontalAlignment="Left" Margin="490,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16"/>
+        <Label Content="Numero di memrbi:" HorizontalAlignment="Left" Height="24" Margin="202,140,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="n_squadre_txtbox" HorizontalAlignment="Left" Margin="317,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16" IsReadOnly="True"/>
+        <Label Content="Nome Squadra:" HorizontalAlignment="Left" Height="24" Margin="220,107,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="nome_torneo_txtbox_Copy1" HorizontalAlignment="Left" Margin="317,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="16" IsReadOnly="True"/>
+        <RadioButton x:Name="radio_btn_gironi" Content="Gironi" HorizontalAlignment="Left" Margin="220,204,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radio_btn_tabellone" Content="Tabellone" HorizontalAlignment="Left" Margin="220,224,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
