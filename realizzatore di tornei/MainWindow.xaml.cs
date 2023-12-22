@@ -30,6 +30,7 @@ namespace realizzatore_di_tornei
             InitializeComponent();
 
             radio_btn_tabellone.IsChecked = true;
+
         }
 
         private void add_sq_button_Click(object sender, RoutedEventArgs e)
@@ -99,8 +100,23 @@ namespace realizzatore_di_tornei
 
         private void elimina_btn_Click(object sender, RoutedEventArgs e)
         {
-            listbox_squadre.SelectedItem = null;
-            squadraList[listbox_squadre.SelectedIndex] = null;
+            if(listbox_squadre.Items.Count == 1)
+            {
+                MessageBox.Show("Non puoi eliminare l'ultima squadra rimasta, creane prima un'altra");
+            }
+            else
+            {
+                listbox_squadre.Items.RemoveAt(listbox_squadre.SelectedIndex);
+                squadraList.Remove(squadraList[listbox_squadre.SelectedIndex]);
+                listbox_squadre.SelectedIndex = 0;
+            }
+
+        }
+
+        private void clear_btn_Click(object sender, RoutedEventArgs e)
+        {
+            listbox_squadre.Items.Clear();
+            squadraList.Clear();
         }
     }
 }

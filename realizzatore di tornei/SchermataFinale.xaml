@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:realizzatore_di_tornei"
         mc:Ignorable="d"
-        Title="SchermataFinale" Height="599" Width="1000">
+        Title="Realizzatore di tornei by Christian Colombo®" Height="599" Width="1000">
     <Grid x:Name="Griglia" Margin="0,0,0,-6">
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>

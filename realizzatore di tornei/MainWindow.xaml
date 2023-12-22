@@ -7,18 +7,24 @@
         mc:Ignorable="d"
         Title="Realizzatore di tornei by Christian Colombo®" Height="450" Width="652">
     <Grid Background="#FFAAC6D2">
-        <ListBox x:Name="listbox_squadre" HorizontalAlignment="Left" Height="414" VerticalAlignment="Center" Width="188" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="Black" BorderThickness="1,1,10,1" Background="#FFAAC6D2" SelectionChanged="listbox_squadre_SelectionChanged"/>
-        <Button x:Name="add_sq_button" Content="Aggiungi Squadra" HorizontalAlignment="Left" Height="48" Margin="193,10,0,0" VerticalAlignment="Top" Width="122" Click="add_sq_button_Click"/>
-        <Label Content="Nome competizione:" HorizontalAlignment="Left" Height="24" Margin="360,10,0,0" VerticalAlignment="Top" Width="130"/>
-        <TextBox x:Name="nome_torneo_txtbox" HorizontalAlignment="Left" Margin="490,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16"/>
-        <Label Content="Numero di membri:" HorizontalAlignment="Left" Height="24" Margin="202,140,0,0" VerticalAlignment="Top" Width="110"/>
-        <TextBox x:Name="n_squadre_txtbox" HorizontalAlignment="Left" Margin="317,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16" IsReadOnly="True"/>
-        <Label Content="Nome Squadra:" HorizontalAlignment="Left" Height="24" Margin="220,107,0,0" VerticalAlignment="Top" Width="95"/>
-        <TextBox x:Name="nome_squadra_txtbox" HorizontalAlignment="Left" Margin="317,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="16" IsReadOnly="True"/>
-        <RadioButton x:Name="radio_btn_gironi" Content="Gironi" HorizontalAlignment="Left" Margin="220,204,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radio_btn_tabellone" Content="Tabellone" HorizontalAlignment="Left" Margin="220,224,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="avvia_btn" Content="Avvia" HorizontalAlignment="Left" Margin="508,332,0,0" VerticalAlignment="Top" Height="68" Width="126" Click="avvia_btn_Click"/>
-        <Button x:Name="elimina_btn" Content="Elimina squadra" HorizontalAlignment="Left" Margin="202,283,0,0" VerticalAlignment="Top" Height="50" Width="113" IsEnabled="False" Click="elimina_btn_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="188*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="453*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listbox_squadre" HorizontalAlignment="Center" Height="414" VerticalAlignment="Center" Width="188" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="Black" BorderThickness="1,1,10,1" Background="#FFAAC6D2" SelectionChanged="listbox_squadre_SelectionChanged"/>
+        <Button x:Name="add_sq_button" Content="Aggiungi Squadra" HorizontalAlignment="Left" Height="48" Margin="0,10,0,0" VerticalAlignment="Top" Width="122" Click="add_sq_button_Click" Grid.Column="2"/>
+        <Label Content="Nome competizione:" HorizontalAlignment="Center" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="130" Grid.Column="2"/>
+        <TextBox x:Name="nome_torneo_txtbox" HorizontalAlignment="Left" Margin="284,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16" Grid.Column="2"/>
+        <Label Content="Numero di membri:" HorizontalAlignment="Left" Height="24" Margin="2,140,0,0" VerticalAlignment="Top" Width="110" Grid.Column="2"/>
+        <TextBox x:Name="n_squadre_txtbox" HorizontalAlignment="Left" Margin="111,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16" IsReadOnly="True" Grid.Column="2"/>
+        <Label Content="Nome Squadra:" HorizontalAlignment="Left" Height="24" Margin="14,107,0,0" VerticalAlignment="Top" Width="95" Grid.Column="2"/>
+        <TextBox x:Name="nome_squadra_txtbox" HorizontalAlignment="Left" Margin="111,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="16" IsReadOnly="True" Grid.Column="2"/>
+        <RadioButton x:Name="radio_btn_gironi" Content="Gironi" HorizontalAlignment="Left" Margin="14,204,0,0" VerticalAlignment="Top" Grid.Column="2" Height="15" Width="51"/>
+        <RadioButton x:Name="radio_btn_tabellone" Content="Tabellone" HorizontalAlignment="Left" Margin="14,224,0,0" VerticalAlignment="Top" Grid.Column="2" Height="15" Width="69"/>
+        <Button x:Name="avvia_btn" Content="Avvia" HorizontalAlignment="Left" Margin="302,332,0,0" VerticalAlignment="Top" Height="68" Width="126" Click="avvia_btn_Click" Grid.Column="2"/>
+        <Button x:Name="elimina_btn" Content="Elimina squadra" HorizontalAlignment="Left" Margin="2,283,0,0" VerticalAlignment="Top" Height="50" Width="113" IsEnabled="False" Click="elimina_btn_Click" Grid.Column="2"/>
+        <Button x:Name="clear_btn" Grid.Column="2" Content="Clear lista" HorizontalAlignment="Left" Margin="2,338,0,0" VerticalAlignment="Top" Height="54" Width="110" Click="clear_btn_Click"/>
 
     </Grid>
 </Window>
