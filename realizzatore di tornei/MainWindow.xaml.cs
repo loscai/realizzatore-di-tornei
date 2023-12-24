@@ -55,15 +55,22 @@ namespace realizzatore_di_tornei
 
         private void listbox_squadre_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            elimina_btn.IsEnabled = true;
-            nome_squadra_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].Nome;
-            n_squadre_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].NMembri.ToString();
+            if (listbox_squadre.Items.Count > 0 && listbox_squadre.SelectedItem != null)
+            {
+                elimina_btn.IsEnabled = true;
+                nome_squadra_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].Nome;
+                n_squadre_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].NMembri.ToString();
+            }
+            else
+            {
+                listbox_squadre.SelectedIndex = 0;
+            }
         }
 
         private void avvia_btn_Click(object sender, RoutedEventArgs e)
         {
             //controllo che il campo del testo del torneo non sia vuoto e che nella lista ci siano almeno 4 teams
-            if(nome_torneo_txtbox.Text != string.Empty && listbox_squadre.Items.Count > 3 && listbox_squadre.Items.Count % 4 == 0)
+            if(nome_torneo_txtbox.Text != string.Empty && listbox_squadre.Items.Count > 3 && listbox_squadre.Items.Count == 2 || listbox_squadre.Items.Count == 4 || listbox_squadre.Items.Count == 8 || listbox_squadre.Items.Count == 16 || listbox_squadre.Items.Count == 32)
             {
                 SchermataFinale sf;
                 if (radio_btn_gironi.IsChecked == true)
@@ -80,21 +87,21 @@ namespace realizzatore_di_tornei
 
                 this.Show();
             }
-            else if(nome_torneo_txtbox.Text == string.Empty && listbox_squadre.Items.Count < 4)
+            else if(nome_torneo_txtbox.Text == string.Empty && listbox_squadre.Items.Count < 2)
             {
-                MessageBox.Show("Inserire il nome alla competizione || Bisogna inserire almeno 4 squadre");
+                MessageBox.Show("Inserire il nome alla competizione || Bisogna inserire almeno 2 squadre");
             }
             else if(nome_torneo_txtbox.Text == string.Empty)
             {
                 MessageBox.Show("Inserire il nome alla competizione");
             }
-            else if(listbox_squadre.Items.Count < 4)
+            else if(listbox_squadre.Items.Count < 2)
             {
-                MessageBox.Show("Bisogna inserire almeno 4 squadre");
+                MessageBox.Show("Bisogna inserire almeno 2 squadre");
             }
-            else if(listbox_squadre.Items.Count % 4 != 0)
+            else if(listbox_squadre.Items.Count  != 2 || listbox_squadre.Items.Count != 4 || listbox_squadre.Items.Count != 8 || listbox_squadre.Items.Count != 16 || listbox_squadre.Items.Count != 32)
             {
-                MessageBox.Show("Il numero di squadre deve essere pari e divisibili per 4");
+                MessageBox.Show("Il numero di squadre deve essere pari e uno di questi valori: 2,4,8,16,32");
             }
         }
 
@@ -117,6 +124,10 @@ namespace realizzatore_di_tornei
         {
             listbox_squadre.Items.Clear();
             squadraList.Clear();
+
+            elimina_btn.IsEnabled = false;
+            nome_squadra_txtbox.Text = string.Empty;
+            n_squadre_txtbox.Text = string.Empty;
         }
     }
 }

@@ -37,23 +37,57 @@ namespace realizzatore_di_tornei
             this.nSquadre = nSquadre;
             this.isTabellone = isTabellone;
 
-            this.nCaselleTotali = (nSquadre*2) - 1;
+            this.nCaselleTotali = (nSquadre * 2) - 1;
 
             caselle = new Button[nCaselleTotali];
 
-            for(int i = 0; i < caselle.Length; i++)
+            for (int i = 0; i < caselle.Length; i++)
             {
-                if(i < nSquadre)
+                if (i < nSquadre)
                 {
                     caselle[i] = new Button();
                     caselle[i].Content = squadraList[i].Nome;
+                    caselle[i].Width = 50;
+                    caselle[i].Height = 25;
+                    caselle[i].VerticalAlignment = VerticalAlignment.Top;
+                    caselle[i].HorizontalAlignment = HorizontalAlignment.Left;
                 }
                 else
                 {
                     caselle[i] = new Button();
                     caselle[i].Content = string.Empty;
+                    caselle[i].Width = 50;
+                    caselle[i].Height = 25;
+                    caselle[i].VerticalAlignment = VerticalAlignment.Top;
+                    caselle[i].HorizontalAlignment = HorizontalAlignment.Left;
                 }
-                
+            }
+
+            for (int i = 0; i < Math.Sqrt(nSquadre); i++)
+            {
+
+                Grid1.Children.Add(caselle[i]);
+
+                if (nSquadre == 32)
+                {
+                    Grid.SetColumn(caselle[i], 0);
+                    Grid.SetRow(caselle[i], i);
+                }
+                else if (nSquadre == 16)
+                {
+                    Grid.SetColumn(caselle[i], 1);
+                    Grid.SetRow(caselle[i], i);
+                }
+                else if (nSquadre == 8)
+                {
+                    Grid.SetColumn(caselle[i], 2);
+                    Grid.SetRow(caselle[i], i);
+                }
+                else if (nSquadre == 4)
+                {
+                    Grid.SetColumn(caselle[i], 3);
+                    Grid.SetRow(caselle[i], i);
+                }
             }
         }
     }

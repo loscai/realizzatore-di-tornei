@@ -5,17 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:realizzatore_di_tornei"
         mc:Ignorable="d"
-        Title="Realizzatore di tornei by Christian Colombo®" Height="599" Width="1000">
-    <Grid x:Name="Griglia" Margin="0,0,0,-6">
+        Title="Realizzatore di tornei by Christian Colombo®" Height="800" Width="1000">
+    <Grid x:Name="Grid1" Margin="0,10,0,-6">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0*"/>
-            <RowDefinition/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25.001"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="pannello" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>
