@@ -63,30 +63,43 @@ namespace realizzatore_di_tornei
                 }
             }
 
+            disegnaColonna(nSquadre);
+        }
+
+        public void disegnaColonna(int nSquadre)
+        {
             for (int i = 0; i < Math.Sqrt(nSquadre); i++)
             {
-
                 Grid1.Children.Add(caselle[i]);
 
-                if (nSquadre == 32)
+                for (global::System.Int32 j = 0; j < nSquadre; j++)
                 {
-                    Grid.SetColumn(caselle[i], 0);
-                    Grid.SetRow(caselle[i], i);
-                }
-                else if (nSquadre == 16)
-                {
-                    Grid.SetColumn(caselle[i], 1);
-                    Grid.SetRow(caselle[i], i);
-                }
-                else if (nSquadre == 8)
-                {
-                    Grid.SetColumn(caselle[i], 2);
-                    Grid.SetRow(caselle[i], i);
-                }
-                else if (nSquadre == 4)
-                {
-                    Grid.SetColumn(caselle[i], 3);
-                    Grid.SetRow(caselle[i], i);
+
+                    if (nSquadre == 32)
+                    {
+                        Grid.SetColumn(caselle[j], 0);
+                        Grid.SetRow(caselle[j], j);
+                    }
+                    else if (nSquadre == 16)
+                    {
+                        Grid.SetColumn(caselle[j], 1);
+                        Grid.SetRow(caselle[j], i);
+                    }
+                    else if (nSquadre == 8)
+                    {
+                        Grid.SetColumn(caselle[j],2);
+                        Grid.SetRow(caselle[j], j);
+                    }
+                    else if (nSquadre == 4)
+                    {
+                        Grid.SetColumn(caselle[j], 3);
+                        Grid.SetRow(caselle[j], j);
+                    }
+                    else if (nSquadre == 2)
+                    {
+                        Grid.SetColumn(caselle[j], 3);
+                        Grid.SetRow(caselle[j], j);
+                    }
                 }
             }
         }

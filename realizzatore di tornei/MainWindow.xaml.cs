@@ -70,12 +70,21 @@ namespace realizzatore_di_tornei
         private void avvia_btn_Click(object sender, RoutedEventArgs e)
         {
             //controllo che il campo del testo del torneo non sia vuoto e che nella lista ci siano almeno 4 teams
-            if(nome_torneo_txtbox.Text != string.Empty && listbox_squadre.Items.Count > 3 && listbox_squadre.Items.Count == 2 || listbox_squadre.Items.Count == 4 || listbox_squadre.Items.Count == 8 || listbox_squadre.Items.Count == 16 || listbox_squadre.Items.Count == 32)
+            
+            if(nome_torneo_txtbox.Text == string.Empty)
+            {
+                MessageBox.Show("Inserire il nome alla competizione");
+            }
+            else if(listbox_squadre.Items.Count  != 2 && listbox_squadre.Items.Count != 4 && listbox_squadre.Items.Count != 8 && listbox_squadre.Items.Count != 16 && listbox_squadre.Items.Count != 32)
+            {
+                MessageBox.Show("Il numero di squadre deve essere pari e uno di questi valori: 2,4,8,16,32");
+            }
+            else
             {
                 SchermataFinale sf;
                 if (radio_btn_gironi.IsChecked == true)
                 {
-                    sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList,false);
+                    sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false);
                 }
                 else
                 {
@@ -85,23 +94,7 @@ namespace realizzatore_di_tornei
 
                 sf.ShowDialog();
 
-                this.Show();
-            }
-            else if(nome_torneo_txtbox.Text == string.Empty && listbox_squadre.Items.Count < 2)
-            {
-                MessageBox.Show("Inserire il nome alla competizione || Bisogna inserire almeno 2 squadre");
-            }
-            else if(nome_torneo_txtbox.Text == string.Empty)
-            {
-                MessageBox.Show("Inserire il nome alla competizione");
-            }
-            else if(listbox_squadre.Items.Count < 2)
-            {
-                MessageBox.Show("Bisogna inserire almeno 2 squadre");
-            }
-            else if(listbox_squadre.Items.Count  != 2 || listbox_squadre.Items.Count != 4 || listbox_squadre.Items.Count != 8 || listbox_squadre.Items.Count != 16 || listbox_squadre.Items.Count != 32)
-            {
-                MessageBox.Show("Il numero di squadre deve essere pari e uno di questi valori: 2,4,8,16,32");
+                this.Close();
             }
         }
 
