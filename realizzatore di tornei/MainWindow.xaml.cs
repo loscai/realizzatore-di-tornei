@@ -23,7 +23,7 @@ namespace realizzatore_di_tornei
     
     public partial class MainWindow : Window
     {
-        const int maxNumeSquadre = 32;
+        const int maxNumeSquadre = 16;
         List <Squadra> squadraList = new List<Squadra>();
         public MainWindow()
         {
@@ -75,9 +75,9 @@ namespace realizzatore_di_tornei
             {
                 MessageBox.Show("Inserire il nome alla competizione");
             }
-            else if(listbox_squadre.Items.Count  != 2 && listbox_squadre.Items.Count != 4 && listbox_squadre.Items.Count != 8 && listbox_squadre.Items.Count != 16 && listbox_squadre.Items.Count != 32)
+            else if(listbox_squadre.Items.Count  != 2 && listbox_squadre.Items.Count != 4 && listbox_squadre.Items.Count != 8 && listbox_squadre.Items.Count != 16)
             {
-                MessageBox.Show("Il numero di squadre deve essere pari e uno di questi valori: 2,4,8,16,32");
+                MessageBox.Show("Il numero di squadre deve essere pari e uno di questi valori: 2,4,8,16");
             }
             else
             {
