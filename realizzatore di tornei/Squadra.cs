@@ -8,8 +8,8 @@ namespace realizzatore_di_tornei
 {
     public class Squadra
     {
-        String nome;
-        int nMembri;
+        private String nome;
+        private int nMembri;
         public string Nome { get => nome; set => nome = value; }
         public int NMembri { get => nMembri; set => nMembri = value; }
 

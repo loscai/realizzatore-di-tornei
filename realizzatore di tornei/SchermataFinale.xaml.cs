@@ -23,13 +23,13 @@ namespace realizzatore_di_tornei
 
         int nCaselleTotali;
 
-        Button[] ottavi = { };
+        public Button[] ottavi = new Button[16];
 
-        Button[] quarti = { };
+        public Button[] quarti = new Button[8];
 
-        Button[] semifinali = { };
+        public Button[] semifinali = new Button[4];
 
-        Button[] finale = { };
+        public Button[] finale = new Button[2];
 
 
 
@@ -80,13 +80,70 @@ namespace realizzatore_di_tornei
             semifinali[3] = btn_semi_4;
 
             finale[0] = btn_finale_1;
-            finale[0] = btn_finale_2;
+            finale[1] = btn_finale_2;
 
+            inizializzaTabellone();
+        }
 
+        public void inizializzaTabellone()
+        {
+            int n = this.nSquadre;
 
+            switch(n)
+            {
+                case 2:
+                    for (int i = 0; i < n; i++)
+                    {
+                        finale[i].Content = squadraList[i].ToString();
+                    }
+                    //setto a '/' tutte le caselle precedenti
+                    for (int i = 0; i < 16; i++)
+                    {
+                        ottavi[i].Content = "/";
+                        if(i < 8)
+                        {
+                            quarti[i].Content = "/";
+                            if (i < 4)
+                            {
+                                semifinali[i].Content = "/";
+                            }
+                        }
+                    }
+                    break;
 
+                case 4:
 
+                    for (int i = 0; i < n; i++)
+                    {
+                        semifinali[i].Content = squadraList[i].Nome;
+                    }
 
+                    for (int i = 0; i < 16; i++)
+                    {
+                        ottavi[i].Content = "/";
+                        if (i < 8)
+                        {
+                            quarti[i].Content = "/";
+                        }
+                    }
+                    break;
+                case 8:
+                    for (int i = 0; i < 16; i++)
+                    {
+                        ottavi[i].Content = "/";
+
+                        if(i < 8)
+                            quarti[i].Content = squadraList[i].Nome;
+
+                    }
+                    break;
+                case 16:
+                    for (int i = 0; i < n; i++)
+                    {
+                        ottavi[i].Content = squadraList[i].Nome;
+                    }
+                    break;
+            }
         }
 
 

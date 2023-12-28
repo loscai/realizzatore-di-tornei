@@ -29,8 +29,6 @@ namespace realizzatore_di_tornei
         {
             InitializeComponent();
 
-            radio_btn_tabellone.IsChecked = true;
-
         }
 
         private void add_sq_button_Click(object sender, RoutedEventArgs e)
@@ -82,17 +80,14 @@ namespace realizzatore_di_tornei
             else
             {
                 SchermataFinale sf;
-                if (radio_btn_gironi.IsChecked == true)
-                {
-                    sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false);
-                }
-                else
-                {
-                    sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, true);
-                }
+
+                sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false);new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, true);
+                
                 this.Hide();
 
                 sf.ShowDialog();
+
+                this.Show();
 
                 this.Close();
             }
