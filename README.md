@@ -9,3 +9,4 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 2)	Inserire un certo numero di squadre inserendo un numero da 1 a il numero massimo di squadre inseribili (il massimo è 16, ma se alcune squadre sono già state inserite il numero massimo inseribile è 16 – numero di squadre già inserite);
 ---
 
+![Schermata principale](images/schermata_principale_SW.png "Schermata principale")
