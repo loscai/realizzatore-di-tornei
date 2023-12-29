@@ -89,7 +89,7 @@ namespace realizzatore_di_tornei
         {
             int n = this.nSquadre;
 
-            switch(n)
+            switch (n)
             {
                 case 2:
                     for (int i = 0; i < n; i++)
@@ -100,12 +100,15 @@ namespace realizzatore_di_tornei
                     for (int i = 0; i < 16; i++)
                     {
                         ottavi[i].Content = "/";
-                        if(i < 8)
+                        ottavi[i].IsEnabled = false;
+                        if (i < 8)
                         {
                             quarti[i].Content = "/";
+                            quarti[i].IsEnabled = false;
                             if (i < 4)
                             {
                                 semifinali[i].Content = "/";
+                                semifinali[i].IsEnabled = false;
                             }
                         }
                     }
@@ -121,9 +124,12 @@ namespace realizzatore_di_tornei
                     for (int i = 0; i < 16; i++)
                     {
                         ottavi[i].Content = "/";
+                        ottavi[i].IsEnabled = false;
+
                         if (i < 8)
                         {
                             quarti[i].Content = "/";
+                            quarti[i].IsEnabled = false;
                         }
                     }
                     break;
@@ -131,8 +137,8 @@ namespace realizzatore_di_tornei
                     for (int i = 0; i < 16; i++)
                     {
                         ottavi[i].Content = "/";
-
-                        if(i < 8)
+                        ottavi[i].IsEnabled = false;
+                        if (i < 8)
                             quarti[i].Content = squadraList[i].Nome;
 
                     }
@@ -145,7 +151,214 @@ namespace realizzatore_di_tornei
                     break;
             }
         }
+        private void btn_ottavi_1_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_1.Content = btn_ottavi_1.Content;
+            btn_ottavi_1.IsEnabled = false;
+            btn_ottavi_2.IsEnabled = false;
+        }
 
+        private void btn_ottavi_2_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_1.Content = btn_ottavi_2.Content;
+            btn_ottavi_1.IsEnabled = false;
+            btn_ottavi_2.IsEnabled = false;
+        }
 
+        private void btn_ottavi_3_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_2.Content = btn_ottavi_3.Content;
+            btn_ottavi_3.IsEnabled = false;
+            btn_ottavi_4.IsEnabled = false;
+        }
+
+        private void btn_ottavi_4_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_2.Content = btn_ottavi_4.Content;
+            btn_ottavi_3.IsEnabled = false;
+            btn_ottavi_4.IsEnabled = false;
+        }
+
+        private void btn_ottavi_5_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_3.Content = btn_ottavi_5.Content;
+            btn_ottavi_5.IsEnabled = false;
+            btn_ottavi_6.IsEnabled = false;
+        }
+
+        private void btn_ottavi_6_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_3.Content = btn_ottavi_6.Content;
+            btn_ottavi_5.IsEnabled = false;
+            btn_ottavi_6.IsEnabled = false;
+        }
+
+        private void btn_ottavi_7_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_4.Content = btn_ottavi_7.Content;
+            btn_ottavi_7.IsEnabled = false;
+            btn_ottavi_8.IsEnabled = false;
+        }
+
+        private void btn_ottavi_8_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_4.Content = btn_ottavi_8.Content;
+            btn_ottavi_7.IsEnabled = false;
+            btn_ottavi_8.IsEnabled = false;
+        }
+
+        private void btn_ottavi_9_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_5.Content = btn_ottavi_9.Content;
+            btn_ottavi_9.IsEnabled = false;
+            btn_ottavi_10.IsEnabled = false;
+        }
+
+        private void btn_ottavi_10_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_5.Content = btn_ottavi_10.Content;
+            btn_ottavi_9.IsEnabled = false;
+            btn_ottavi_10.IsEnabled = false;
+        }
+
+        private void btn_ottavi_11_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_6.Content = btn_ottavi_11.Content;
+            btn_ottavi_11.IsEnabled = false;
+            btn_ottavi_12.IsEnabled = false;
+        }
+
+        private void btn_ottavi_12_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_6.Content = btn_ottavi_12.Content;
+            btn_ottavi_11.IsEnabled = false;
+            btn_ottavi_12.IsEnabled = false;
+        }
+
+        private void btn_ottavi_13_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_7.Content = btn_ottavi_13.Content;
+            btn_ottavi_13.IsEnabled = false;
+            btn_ottavi_14.IsEnabled = false;
+        }
+
+        private void btn_ottavi_14_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_7.Content = btn_ottavi_14.Content;
+            btn_ottavi_13.IsEnabled = false;
+            btn_ottavi_14.IsEnabled = false;
+        }
+
+        private void btn_ottavi_15_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_8.Content = btn_ottavi_15.Content;
+            btn_ottavi_15.IsEnabled = false;
+            btn_ottavi_16.IsEnabled = false;
+        }
+
+        private void btn_ottavi_16_Click(object sender, RoutedEventArgs e)
+        {
+            btn_quarti_8.Content = btn_ottavi_16.Content;
+            btn_ottavi_15.IsEnabled = false;
+            btn_ottavi_16.IsEnabled = false;
+        }
+
+        private void btn_quarti_1_Click(object sender, RoutedEventArgs e)
+        {
+            btn_semi_1.Content = btn_quarti_1.Content;
+            btn_quarti_1.IsEnabled = false;
+            btn_quarti_2.IsEnabled = false;
+        }
+
+        private void btn_quarti_2_Click(object sender, RoutedEventArgs e)
+        {
+            btn_semi_1.Content = btn_quarti_2.Content;
+            btn_quarti_1.IsEnabled = false;
+            btn_quarti_2.IsEnabled = false;
+        }
+
+        private void btn_quarti_3_Click(object sender, RoutedEventArgs e)
+        {
+            btn_semi_2.Content = btn_quarti_3.Content;
+            btn_quarti_3.IsEnabled = false;
+            btn_quarti_4.IsEnabled = false;
+        }
+
+        private void btn_quarti_4_Click(object sender, RoutedEventArgs e)
+        {
+            btn_semi_2.Content = btn_quarti_4.Content;
+            btn_quarti_3.IsEnabled = false;
+            btn_quarti_4.IsEnabled = false;
+        }
+
+        private void btn_quarti_5_Click(object sender, RoutedEventArgs e)
+        {
+            btn_semi_3.Content = btn_quarti_5.Content;
+            btn_quarti_5.IsEnabled = false;
+            btn_quarti_6.IsEnabled = false;
+        }
+
+        private void btn_quarti_6_Click(object sender, RoutedEventArgs e)
+        {
+            btn_semi_3.Content = btn_quarti_6.Content;
+            btn_quarti_5.IsEnabled = false;
+            btn_quarti_6.IsEnabled = false;
+        }
+
+        private void btn_quarti_7_Click(object sender, RoutedEventArgs e)
+        {
+            btn_semi_4.Content = btn_quarti_7.Content;
+            btn_quarti_7.IsEnabled = false;
+            btn_quarti_8.IsEnabled = false;
+        }
+
+        private void btn_quarti_8_Click(object sender, RoutedEventArgs e)
+        {
+            btn_semi_4.Content = btn_quarti_8.Content;
+            btn_quarti_7.IsEnabled = false;
+            btn_quarti_8.IsEnabled = false;
+        }
+
+        private void btn_semi_1_Click(object sender, RoutedEventArgs e)
+        {
+            btn_finale_1.Content = btn_semi_1.Content;
+            btn_semi_1.IsEnabled = false;
+            btn_semi_2.IsEnabled = false;
+        }
+
+        private void btn_semi_2_Click(object sender, RoutedEventArgs e)
+        {
+            btn_finale_1.Content = btn_semi_2.Content;
+            btn_semi_1.IsEnabled = false;
+            btn_semi_2.IsEnabled = false;
+        }
+
+        private void btn_semi_3_Click(object sender, RoutedEventArgs e)
+        {
+            btn_finale_2.Content = btn_semi_3.Content;
+            btn_semi_3.IsEnabled = false;
+            btn_semi_4.IsEnabled = false;
+        }
+
+        private void btn_semi_4_Click(object sender, RoutedEventArgs e)
+        {
+            btn_finale_2.Content = btn_semi_4.Content;
+            btn_semi_3.IsEnabled = false;
+            btn_semi_4.IsEnabled = false;
+        }
+
+        private void btn_finale_1_Click(object sender, RoutedEventArgs e)
+        {
+            btn_vincitore.Content = btn_finale_1.Content;
+            btn_finale_1.IsEnabled = false;
+            btn_finale_2.IsEnabled = false;
+        }
+
+        private void btn_finale_2_Click(object sender, RoutedEventArgs e)
+        {
+            btn_vincitore.Content = btn_finale_2.Content;
+            btn_finale_1.IsEnabled = false;
+            btn_finale_2.IsEnabled = false;
+        }
     }
 }

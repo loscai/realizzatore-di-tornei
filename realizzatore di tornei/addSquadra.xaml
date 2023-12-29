@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:realizzatore_di_tornei"
         mc:Ignorable="d"
-        Title="addSquadra" Height="276" Width="571">
+        Title="addSquadra" Height="276" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
@@ -15,10 +15,8 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="Nome Squadra:" HorizontalAlignment="Left" Margin="18,3,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="92" Grid.Row="1"/>
-        <TextBox x:Name="nomeSq_txtbox" HorizontalAlignment="Left" Margin="120,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" InputScope="PersonalFullName" Grid.Column="1" Height="18" Grid.Row="1"/>
-        <Label Content="Numero Membri:" HorizontalAlignment="Left" Margin="14,34,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="101" Grid.Row="1"/>
-        <TextBox x:Name="nMembri_txtbox" HorizontalAlignment="Left" Margin="120,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" InputScope="Digits" Grid.Column="1" Height="18" Grid.Row="1" HorizontalScrollBarVisibility="Visible" MaxLength="3"/>
+        <Label Content="Nome Squadra:" HorizontalAlignment="Left" Margin="28,68,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="92" Grid.Row="1"/>
+        <TextBox x:Name="nomeSq_txtbox" HorizontalAlignment="Left" Margin="125,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" InputScope="PersonalFullName" Grid.Column="1" Height="18" Grid.Row="1"/>
         <Button x:Name="creaSquadra_btn" Content="Crea Squadra" HorizontalAlignment="Left" Margin="64,130,0,0" VerticalAlignment="Top" Height="80" Width="150" Click="creaSquadra_btn_Click" Grid.Column="1" Grid.Row="1"/>
 
     </Grid>

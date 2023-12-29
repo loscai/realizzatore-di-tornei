@@ -57,7 +57,6 @@ namespace realizzatore_di_tornei
             {
                 elimina_btn.IsEnabled = true;
                 nome_squadra_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].Nome;
-                n_squadre_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].NMembri.ToString();
             }
             else
             {
@@ -115,7 +114,11 @@ namespace realizzatore_di_tornei
 
             elimina_btn.IsEnabled = false;
             nome_squadra_txtbox.Text = string.Empty;
-            n_squadre_txtbox.Text = string.Empty;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

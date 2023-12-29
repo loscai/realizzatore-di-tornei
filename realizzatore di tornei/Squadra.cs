@@ -9,14 +9,11 @@ namespace realizzatore_di_tornei
     public class Squadra
     {
         private String nome;
-        private int nMembri;
         public string Nome { get => nome; set => nome = value; }
-        public int NMembri { get => nMembri; set => nMembri = value; }
 
-        public Squadra(string nome, int nMembri)
+        public Squadra(string nome)
         {
             this.nome = nome;
-            this.nMembri = nMembri;
         }
 
         public override string ToString()
