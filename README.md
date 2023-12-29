@@ -8,5 +8,12 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 1)	Inserire una squadra alla volta, specificandone il nome;
 2)	Inserire un certo numero di squadre inserendo un numero da 1 a il numero massimo di squadre inseribili (il massimo è 16, ma se alcune squadre sono già state inserite il numero massimo inseribile è 16 – numero di squadre già inserite);
 ---
+## Azioni possibili:
+- Modificare il nome di una squadra già inserita (W.I.P.)
+- Eliminare una squadra selezionata
+- Pulire la lista eliminando tutti le squadre presenti
+---
 
 ![Schermata principale](images/schermata_principale_SW.png "Schermata principale")
+
+---
