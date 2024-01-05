@@ -13,6 +13,37 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 - Pulire la lista eliminando tutti le squadre presenti / Clear the list deleting all the teams inside;
 ---
 ## Schermata Principale / Main Window:
-![Schermata principale](images/schermata_principale_SW.png "Schermata principale")
+![](images/schermata_principale_SW.png "Schermata principale")
 
 ---
+
+## Schermata Di Aggiunta di una Squadra / Window to add a team:
+![](images/schermata_addsquadra.png "Schermata di Aggiunta Squadra")
+
+---
+
+## Schermata Per modificare il nome di una Squadra / Window to edit the name of a team:
+![](images/modificaNomeSquadra_window.png "Schermata di Modifca nome di una squadra")
+### (Esempio realizzato con 2 squadra ma se ne possono inserire fino a 16 / Example created with 2 teams but up to 16 can be inserted)
+
+
+---
+
+## Schermata Principale prima di avviare la competizione / Main Window before starting the competition:
+![](images/schermata_principale_SW_BS.png "Schermata principale")
+
+---
+
+## Schermata Finale / Final Window:
+### Per mandare avanti di uno step una squadra è necessario premere sul pulsante che la rappresenta /  To move a team forward one step you need to press the button that represents it
+![](images/Schermata_finale_p1.png "Schermata Di inizializzazione tabellone")
+
+![](images/Schermata_finale_p2.png "Schermata con competizione finita")
+
+---
+
+# COME UTILIZZARE IL SOFTWARE / HOW TO USE THE SOFTWARE:
+
+1) Vai nella repository Github e premi sul tasto "Code", e copia la repository / Go to the Github repository and press the "Code" button, and copy the repository;
+2) Apri Visual Studio Installer e assicurati di aver installato il seguentie pacchetto/ Open Visual Studio Installer and make Sure to have installed the following package:
+![](images/Pacchetto_da_installare.png )
