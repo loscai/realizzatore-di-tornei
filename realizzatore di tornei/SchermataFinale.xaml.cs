@@ -352,6 +352,7 @@ namespace realizzatore_di_tornei
             btn_vincitore.Content = btn_finale_1.Content;
             btn_finale_1.IsEnabled = false;
             btn_finale_2.IsEnabled = false;
+            MessageBox.Show("Vince la Squadra [ " + btn_vincitore.Content + " ]");
         }
 
         private void btn_finale_2_Click(object sender, RoutedEventArgs e)
@@ -359,6 +360,7 @@ namespace realizzatore_di_tornei
             btn_vincitore.Content = btn_finale_2.Content;
             btn_finale_1.IsEnabled = false;
             btn_finale_2.IsEnabled = false;
+            MessageBox.Show("Vince la Squadra [ " + btn_vincitore.Content + " ]");
         }
     }
 }

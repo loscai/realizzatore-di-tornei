@@ -21,7 +21,7 @@
         <Button x:Name="avvia_btn" Content="Avvia" HorizontalAlignment="Left" Margin="302,332,0,0" VerticalAlignment="Top" Height="68" Width="126" Click="avvia_btn_Click" Grid.Column="2"/>
         <Button x:Name="elimina_btn" Content="Elimina squadra" HorizontalAlignment="Left" Margin="2,283,0,0" VerticalAlignment="Top" Height="50" Width="113" IsEnabled="False" Click="elimina_btn_Click" Grid.Column="2"/>
         <Button x:Name="clear_btn" Grid.Column="2" Content="Clear lista" HorizontalAlignment="Left" Margin="2,338,0,0" VerticalAlignment="Top" Height="54" Width="110" Click="clear_btn_Click"/>
-        <Button Grid.Column="2" Content="Add N Squadre" HorizontalAlignment="Left" Margin="0,217,0,0" VerticalAlignment="Top" Height="61" Width="112" Click="Button_Click"/>
+        <Button x:Name="modifica_nome_btn" Grid.Column="1" Content="Modifica Nome Squadra" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Height="61" Width="142" Grid.ColumnSpan="2" IsEnabled="False" Click="modifica_nome_btn_Click"/>
 
     </Grid>
 </Window>

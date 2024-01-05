@@ -1,0 +1,15 @@
+﻿<Window x:Class="realizzatore_di_tornei.ModificaNome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:realizzatore_di_tornei"
+        mc:Ignorable="d"
+        Title="ModificaNome" Height="450" Width="400">
+    <Grid Width="400">
+        <Label Content="Nuovo nome squadra: " HorizontalAlignment="Left" Margin="31,77,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nuovoNome_txtbox" HorizontalAlignment="Left" Margin="162,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="invia_btn" Content="Invia" HorizontalAlignment="Left" Margin="33,196,0,0" VerticalAlignment="Top" Height="78" Width="129" Click="invia_btn_Click"/>
+
+    </Grid>
+</Window>

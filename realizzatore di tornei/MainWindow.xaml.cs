@@ -56,6 +56,7 @@ namespace realizzatore_di_tornei
             if (listbox_squadre.Items.Count > 0 && listbox_squadre.SelectedItem != null)
             {
                 elimina_btn.IsEnabled = true;
+                modifica_nome_btn.IsEnabled = true;
                 nome_squadra_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].Nome;
             }
             else
@@ -74,21 +75,19 @@ namespace realizzatore_di_tornei
             }
             else if(listbox_squadre.Items.Count  != 2 && listbox_squadre.Items.Count != 4 && listbox_squadre.Items.Count != 8 && listbox_squadre.Items.Count != 16)
             {
-                MessageBox.Show("Il numero di squadre deve essere pari e uno di questi valori: 2,4,8,16");
+                MessageBox.Show("Il numero di squadre deve essere uno di questi valori: 2,4,8,16");
             }
             else
             {
                 SchermataFinale sf;
 
-                sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false);new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, true);
+                sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false);
                 
                 this.Hide();
 
                 sf.ShowDialog();
 
                 this.Show();
-
-                this.Close();
             }
         }
 
@@ -116,9 +115,23 @@ namespace realizzatore_di_tornei
             nome_squadra_txtbox.Text = string.Empty;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void modifica_nome_btn_Click(object sender, RoutedEventArgs e)
+        {
+            ModificaNome m_n = new ModificaNome(squadraList[listbox_squadre.SelectedIndex]);
+
+            this.Hide();
+            m_n.ShowDialog();
+            this.Show();
+
+            squadraList[listbox_squadre.SelectedIndex] = m_n.sq;
+            listbox_squadre.Items.Clear();
+
+            for (int i = 0; i < squadraList.Count; i++)
+            {
+                listbox_squadre.Items.Add(squadraList[i]);
+            }
+            this.Show();
         }
     }
 }
