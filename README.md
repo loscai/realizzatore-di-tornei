@@ -47,3 +47,5 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 1) Vai nella repository Github e premi sul tasto "Code", e copia la repository / Go to the Github repository and press the "Code" button, and copy the repository;
 2) Apri Visual Studio Installer e assicurati di aver installato il seguentie pacchetto/ Open Visual Studio Installer and make Sure to have installed the following package:
 ![](images/Pacchetto_da_installare.png )
+3) Dopo esserti assicurato di avere il pacchetto installato, apri Visual Studio 2022 e clicca il bottone "Clona Repository" / After making sure you have the package installed, open Visual Studio 2022 and click the "Clone Repository" button;
+4) Incolla il link della repository ed esegui il programma / Paste the repository link and run the program;
