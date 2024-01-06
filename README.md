@@ -2,8 +2,7 @@
 
 ## Autore/Author: Colombo Christian
 
--Scopo del software:
--Goal of the software:
+-Scopo del software / Goal of the software:
 ---
 Richiedere all’utente di inserire tramite un’interfaccia grafica delle squadre e un nome alla competizione, inserendole una alla volta / Ask to the user to insert with a GUI some teams and a name for the competition, inserting them one by one.
 ---
