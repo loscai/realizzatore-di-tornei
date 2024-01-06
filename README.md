@@ -23,7 +23,7 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 
 ## Schermata Per modificare il nome di una Squadra / Window to edit the name of a team:
 ![](images/modificaNomeSquadra_window.png "Schermata di Modifca nome di una squadra")
-### (Esempio realizzato con 2 squadra ma se ne possono inserire fino a 16 / Example created with 2 teams but up to 16 can be inserted)
+### (Esempio realizzato con 2 squadre ma se ne possono inserire fino a 16 / Example created with 2 teams but up to 16 can be inserted)
 
 
 ---
