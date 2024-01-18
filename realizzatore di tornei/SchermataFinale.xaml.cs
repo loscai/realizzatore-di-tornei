@@ -130,6 +130,12 @@ namespace realizzatore_di_tornei
                         {
                             quarti[i].Content = "/";
                             quarti[i].IsEnabled = false;
+                            
+                        }
+                        if(i < 2)
+                        {
+                            finale[i].Content = "/";
+                            finale[i].IsEnabled = false;
                         }
                     }
                     break;
@@ -321,6 +327,7 @@ namespace realizzatore_di_tornei
 
         private void btn_semi_1_Click(object sender, RoutedEventArgs e)
         {
+            btn_finale_1.IsEnabled = true;
             btn_finale_1.Content = btn_semi_1.Content;
             btn_semi_1.IsEnabled = false;
             btn_semi_2.IsEnabled = false;
@@ -328,6 +335,7 @@ namespace realizzatore_di_tornei
 
         private void btn_semi_2_Click(object sender, RoutedEventArgs e)
         {
+            btn_finale_1.IsEnabled = true;
             btn_finale_1.Content = btn_semi_2.Content;
             btn_semi_1.IsEnabled = false;
             btn_semi_2.IsEnabled = false;
@@ -335,6 +343,7 @@ namespace realizzatore_di_tornei
 
         private void btn_semi_3_Click(object sender, RoutedEventArgs e)
         {
+            btn_finale_2.IsEnabled = true;
             btn_finale_2.Content = btn_semi_3.Content;
             btn_semi_3.IsEnabled = false;
             btn_semi_4.IsEnabled = false;
@@ -342,6 +351,7 @@ namespace realizzatore_di_tornei
 
         private void btn_semi_4_Click(object sender, RoutedEventArgs e)
         {
+            btn_finale_2.IsEnabled = true;
             btn_finale_2.Content = btn_semi_4.Content;
             btn_semi_3.IsEnabled = false;
             btn_semi_4.IsEnabled = false;

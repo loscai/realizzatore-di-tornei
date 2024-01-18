@@ -28,7 +28,6 @@ namespace realizzatore_di_tornei
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void add_sq_button_Click(object sender, RoutedEventArgs e)
