@@ -2,8 +2,7 @@
 
 ## Autore/Author: Colombo Christian
 
--Scopo del software:
--Goal of the software:
+-Scopo del software / Goal of the software:
 ---
 Richiedere all’utente di inserire tramite un’interfaccia grafica delle squadre e un nome alla competizione, inserendole una alla volta / Ask to the user to insert with a GUI some teams and a name for the competition, inserting them one by one.
 ---
@@ -24,7 +23,7 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 
 ## Schermata Per modificare il nome di una Squadra / Window to edit the name of a team:
 ![](images/modificaNomeSquadra_window.png "Schermata di Modifca nome di una squadra")
-### (Esempio realizzato con 2 squadra ma se ne possono inserire fino a 16 / Example created with 2 teams but up to 16 can be inserted)
+### (Esempio realizzato con 2 squadre ma se ne possono inserire fino a 16 / Example created with 2 teams but up to 16 can be inserted)
 
 
 ---
@@ -46,6 +45,8 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 
 1) Vai nella repository Github e premi sul tasto "Code", e copia la repository / Go to the Github repository and press the "Code" button, and copy the repository;
 2) Apri Visual Studio Installer e assicurati di aver installato il seguentie pacchetto/ Open Visual Studio Installer and make Sure to have installed the following package:
+
 ![](images/Pacchetto_da_installare.png )
-3) Dopo esserti assicurato di avere il pacchetto installato, apri Visual Studio 2022 e clicca il bottone "Clona Repository" / After making sure you have the package installed, open Visual Studio 2022 and click the "Clone Repository" button;
-4) Incolla il link della repository ed esegui il programma / Paste the repository link and run the program;
+
+4) Dopo esserti assicurato di avere il pacchetto installato, apri Visual Studio 2022 e clicca il bottone "Clona Repository" / After making sure you have the package installed, open Visual Studio 2022 and click the "Clone Repository" button;
+5) Incolla il link della repository ed esegui il programma / Paste the repository link and run the program;
