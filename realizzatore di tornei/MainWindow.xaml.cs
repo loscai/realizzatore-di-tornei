@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -40,8 +43,8 @@ namespace realizzatore_di_tornei
 
                 a.ShowDialog();
 
-                listbox_squadre.Items.Add(a.sq);
-                squadraList.Add(a.sq);
+                listbox_squadre.Items.Add(a.Sq);
+                squadraList.Add(a.Sq);
                 this.Show();
             }
             else
@@ -131,6 +134,40 @@ namespace realizzatore_di_tornei
                 listbox_squadre.Items.Add(squadraList[i]);
             }
             this.Show();
+        }
+
+        private void carica_btn_Click(object sender, RoutedEventArgs e)
+        {
+            string content = "";
+
+
+
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            
+
+
+            if (ofd.ShowDialog() == true)
+                content = File.ReadAllText(ofd.FileName);
+
+            StreamReader sr = new StreamReader(ofd.SafeFileName);
+
+            if (!File.Exists(ofd.SafeFileName))
+            {
+                sr.Close();
+
+                return;
+            }
+
+            while (!sr.EndOfStream)
+            {
+                string nomeSquadra = sr.ReadLine().Replace(';',' ');
+
+
+                squadraList.Add(new Squadra(nomeSquadra));
+                listbox_squadre.Items.Add(squadraList[squadraList.Count-1]);
+            }
+            sr.Close ();
         }
     }
 }

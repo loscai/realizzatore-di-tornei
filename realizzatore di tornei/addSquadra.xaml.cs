@@ -19,17 +19,20 @@ namespace realizzatore_di_tornei
     /// </summary>
     public partial class addSquadra : Window
     {
-        public Squadra sq;
+        private Squadra sq;
         public addSquadra()
         {
             InitializeComponent();
         }
+
+        public Squadra Sq { get => sq; set => sq = value; }
+
         private void creaSquadra_btn_Click(object sender, RoutedEventArgs e)
         {
             if (nomeSq_txtbox.Text != string.Empty)
             {
                         Squadra s = new Squadra(nomeSq_txtbox.Text);
-                        this.sq = s;
+                        this.Sq = s;
                         this.Close();
             }
             else

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -96,19 +97,18 @@ namespace realizzatore_di_tornei
                     {
                         finale[i].Content = squadraList[i].ToString();
                     }
-                    //setto a '/' tutte le caselle precedenti
+                    //rendo invisibili il pulsanti non usati
                     for (int i = 0; i < 16; i++)
                     {
-                        ottavi[i].Content = "/";
-                        ottavi[i].IsEnabled = false;
+                        ottavi[i].Visibility = Visibility.Collapsed;
+
                         if (i < 8)
                         {
-                            quarti[i].Content = "/";
-                            quarti[i].IsEnabled = false;
+                            quarti[i].Visibility = Visibility.Collapsed;
+
                             if (i < 4)
                             {
-                                semifinali[i].Content = "/";
-                                semifinali[i].IsEnabled = false;
+                                semifinali[i].Visibility = Visibility.Collapsed;
                             }
                         }
                     }
@@ -123,29 +123,46 @@ namespace realizzatore_di_tornei
 
                     for (int i = 0; i < 16; i++)
                     {
-                        ottavi[i].Content = "/";
                         ottavi[i].IsEnabled = false;
+                        ottavi[i].Visibility = Visibility.Collapsed;
 
                         if (i < 8)
                         {
-                            quarti[i].Content = "/";
                             quarti[i].IsEnabled = false;
-                            
+                            quarti[i].Visibility = Visibility.Collapsed;
+
                         }
-                        if(i < 2)
+                        if (i < 2)
                         {
-                            finale[i].Content = "/";
                             finale[i].IsEnabled = false;
+                            finale[i].Visibility = Visibility.Collapsed;
                         }
                     }
                     break;
                 case 8:
                     for (int i = 0; i < 16; i++)
                     {
-                        ottavi[i].Content = "/";
                         ottavi[i].IsEnabled = false;
+                        ottavi[i].Visibility = Visibility.Collapsed;
+
                         if (i < 8)
+                        {
+                            quarti[i].IsEnabled = true;
+                            quarti[i].Visibility = Visibility.Visible;
                             quarti[i].Content = squadraList[i].Nome;
+                           
+                            if (i < 4)
+                            {
+                                semifinali[i].IsEnabled = false;
+                                semifinali[i].Visibility = Visibility.Collapsed;
+                                if (i < 2)
+                                {
+                                    finale[i].IsEnabled = false;
+                                    finale[i].Visibility = Visibility.Collapsed;
+                                }
+                            }
+                        }
+
 
                     }
                     break;
@@ -153,224 +170,206 @@ namespace realizzatore_di_tornei
                     for (int i = 0; i < n; i++)
                     {
                         ottavi[i].Content = squadraList[i].Nome;
+                        if(i < 8)
+                        {
+                            quarti[i].IsEnabled=false;
+                            quarti[i].Visibility=Visibility.Collapsed;
+                            if(i < 4)
+                            {
+                                semifinali[i].IsEnabled = false;
+                                semifinali[i].Visibility = Visibility.Collapsed;
+                                if (i < 2)
+                                {
+                                    finale[i].IsEnabled = false;
+                                    finale[i].Visibility = Visibility.Collapsed;
+                                }
+                            }
+                        }
                     }
                     break;
             }
         }
         private void btn_ottavi_1_Click(object sender, RoutedEventArgs e)
         {
-            btn_quarti_1.Content = btn_ottavi_1.Content;
+            Button b = (Button)sender;
+
+            btn_quarti_1.Content = b.Content;
+            btn_quarti_1.Visibility = Visibility.Visible;
+            btn_quarti_1.IsEnabled = true;
             btn_ottavi_1.IsEnabled = false;
             btn_ottavi_2.IsEnabled = false;
         }
 
-        private void btn_ottavi_2_Click(object sender, RoutedEventArgs e)
-        {
-            btn_quarti_1.Content = btn_ottavi_2.Content;
-            btn_ottavi_1.IsEnabled = false;
-            btn_ottavi_2.IsEnabled = false;
-        }
 
         private void btn_ottavi_3_Click(object sender, RoutedEventArgs e)
         {
-            btn_quarti_2.Content = btn_ottavi_3.Content;
+            Button b = (Button)sender;
+
+            btn_quarti_2.Content = b.Content;
+            btn_quarti_2.Visibility = Visibility.Visible;
+            btn_quarti_2.IsEnabled = true;
             btn_ottavi_3.IsEnabled = false;
             btn_ottavi_4.IsEnabled = false;
         }
 
-        private void btn_ottavi_4_Click(object sender, RoutedEventArgs e)
-        {
-            btn_quarti_2.Content = btn_ottavi_4.Content;
-            btn_ottavi_3.IsEnabled = false;
-            btn_ottavi_4.IsEnabled = false;
-        }
 
         private void btn_ottavi_5_Click(object sender, RoutedEventArgs e)
         {
-            btn_quarti_3.Content = btn_ottavi_5.Content;
-            btn_ottavi_5.IsEnabled = false;
-            btn_ottavi_6.IsEnabled = false;
-        }
+            Button b = (Button)sender;
 
-        private void btn_ottavi_6_Click(object sender, RoutedEventArgs e)
-        {
-            btn_quarti_3.Content = btn_ottavi_6.Content;
+            btn_quarti_3.Content = b.Content;
+            btn_quarti_3.Visibility = Visibility.Visible;
+            btn_quarti_3.IsEnabled = true;
             btn_ottavi_5.IsEnabled = false;
             btn_ottavi_6.IsEnabled = false;
         }
 
         private void btn_ottavi_7_Click(object sender, RoutedEventArgs e)
         {
-            btn_quarti_4.Content = btn_ottavi_7.Content;
+            Button b = (Button)sender;
+
+            btn_quarti_4.Content = b.Content;
+            btn_quarti_4.Visibility = Visibility.Visible;
+            btn_quarti_4.IsEnabled = true;
             btn_ottavi_7.IsEnabled = false;
             btn_ottavi_8.IsEnabled = false;
         }
 
-        private void btn_ottavi_8_Click(object sender, RoutedEventArgs e)
-        {
-            btn_quarti_4.Content = btn_ottavi_8.Content;
-            btn_ottavi_7.IsEnabled = false;
-            btn_ottavi_8.IsEnabled = false;
-        }
 
         private void btn_ottavi_9_Click(object sender, RoutedEventArgs e)
         {
-            btn_quarti_5.Content = btn_ottavi_9.Content;
-            btn_ottavi_9.IsEnabled = false;
-            btn_ottavi_10.IsEnabled = false;
-        }
+            Button b = (Button)sender;
 
-        private void btn_ottavi_10_Click(object sender, RoutedEventArgs e)
-        {
-            btn_quarti_5.Content = btn_ottavi_10.Content;
+            btn_quarti_5.Content = b.Content;
+            btn_quarti_5.Visibility = Visibility.Visible;
+            btn_quarti_5.IsEnabled = true;
             btn_ottavi_9.IsEnabled = false;
             btn_ottavi_10.IsEnabled = false;
         }
 
         private void btn_ottavi_11_Click(object sender, RoutedEventArgs e)
         {
-            btn_quarti_6.Content = btn_ottavi_11.Content;
+            Button b = (Button)sender;
+
+            btn_quarti_6.Content = b.Content;
+            btn_quarti_6.Visibility = Visibility.Visible;
+            btn_quarti_6.IsEnabled = true;
             btn_ottavi_11.IsEnabled = false;
             btn_ottavi_12.IsEnabled = false;
         }
 
-        private void btn_ottavi_12_Click(object sender, RoutedEventArgs e)
-        {
-            btn_quarti_6.Content = btn_ottavi_12.Content;
-            btn_ottavi_11.IsEnabled = false;
-            btn_ottavi_12.IsEnabled = false;
-        }
 
         private void btn_ottavi_13_Click(object sender, RoutedEventArgs e)
         {
-            btn_quarti_7.Content = btn_ottavi_13.Content;
-            btn_ottavi_13.IsEnabled = false;
-            btn_ottavi_14.IsEnabled = false;
-        }
+            Button b = (Button)sender;
 
-        private void btn_ottavi_14_Click(object sender, RoutedEventArgs e)
-        {
-            btn_quarti_7.Content = btn_ottavi_14.Content;
+            btn_quarti_7.Content = b.Content;
+            btn_quarti_7.Visibility = Visibility.Visible;
+            btn_quarti_7.IsEnabled = true;
             btn_ottavi_13.IsEnabled = false;
             btn_ottavi_14.IsEnabled = false;
         }
 
         private void btn_ottavi_15_Click(object sender, RoutedEventArgs e)
         {
-            btn_quarti_8.Content = btn_ottavi_15.Content;
+            Button b = (Button)sender;
+
+            btn_quarti_8.Content = b.Content;
+            btn_quarti_8.Visibility = Visibility.Visible;
+            btn_quarti_8.IsEnabled = true;
             btn_ottavi_15.IsEnabled = false;
             btn_ottavi_16.IsEnabled = false;
         }
 
-        private void btn_ottavi_16_Click(object sender, RoutedEventArgs e)
-        {
-            btn_quarti_8.Content = btn_ottavi_16.Content;
-            btn_ottavi_15.IsEnabled = false;
-            btn_ottavi_16.IsEnabled = false;
-        }
 
         private void btn_quarti_1_Click(object sender, RoutedEventArgs e)
         {
-            btn_semi_1.Content = btn_quarti_1.Content;
+            Button b = (Button)sender;
+
+            
+            btn_semi_1.Content = b.Content;
+            btn_semi_1.Visibility = Visibility.Visible;
+            btn_semi_1.IsEnabled = true;
             btn_quarti_1.IsEnabled = false;
             btn_quarti_2.IsEnabled = false;
         }
 
-        private void btn_quarti_2_Click(object sender, RoutedEventArgs e)
-        {
-            btn_semi_1.Content = btn_quarti_2.Content;
-            btn_quarti_1.IsEnabled = false;
-            btn_quarti_2.IsEnabled = false;
-        }
 
         private void btn_quarti_3_Click(object sender, RoutedEventArgs e)
         {
-            btn_semi_2.Content = btn_quarti_3.Content;
+            Button b = (Button)sender;
+
+            btn_semi_2.Content = b.Content;
+            btn_semi_2.Visibility = Visibility.Visible;
+            btn_semi_2.IsEnabled = true;
             btn_quarti_3.IsEnabled = false;
             btn_quarti_4.IsEnabled = false;
         }
 
-        private void btn_quarti_4_Click(object sender, RoutedEventArgs e)
-        {
-            btn_semi_2.Content = btn_quarti_4.Content;
-            btn_quarti_3.IsEnabled = false;
-            btn_quarti_4.IsEnabled = false;
-        }
 
         private void btn_quarti_5_Click(object sender, RoutedEventArgs e)
         {
-            btn_semi_3.Content = btn_quarti_5.Content;
+            Button b = (Button)sender;
+
+            btn_semi_3.Content = b.Content;
+            btn_semi_3.Visibility = Visibility.Visible;
+            btn_semi_3.IsEnabled = true;
             btn_quarti_5.IsEnabled = false;
             btn_quarti_6.IsEnabled = false;
         }
 
-        private void btn_quarti_6_Click(object sender, RoutedEventArgs e)
-        {
-            btn_semi_3.Content = btn_quarti_6.Content;
-            btn_quarti_5.IsEnabled = false;
-            btn_quarti_6.IsEnabled = false;
-        }
 
         private void btn_quarti_7_Click(object sender, RoutedEventArgs e)
         {
-            btn_semi_4.Content = btn_quarti_7.Content;
+            Button b = (Button)sender;
+
+            btn_semi_4.Content = b.Content;
+            btn_semi_4.Visibility = Visibility.Visible;
+            btn_semi_4.IsEnabled = true;
             btn_quarti_7.IsEnabled = false;
             btn_quarti_8.IsEnabled = false;
         }
 
-        private void btn_quarti_8_Click(object sender, RoutedEventArgs e)
-        {
-            btn_semi_4.Content = btn_quarti_8.Content;
-            btn_quarti_7.IsEnabled = false;
-            btn_quarti_8.IsEnabled = false;
-        }
 
         private void btn_semi_1_Click(object sender, RoutedEventArgs e)
         {
+            Button b = (Button)sender;
+         
+            btn_finale_1.Content = b.Content;
+            btn_finale_1.Visibility = Visibility.Visible;
             btn_finale_1.IsEnabled = true;
-            btn_finale_1.Content = btn_semi_1.Content;
             btn_semi_1.IsEnabled = false;
             btn_semi_2.IsEnabled = false;
         }
 
-        private void btn_semi_2_Click(object sender, RoutedEventArgs e)
-        {
-            btn_finale_1.IsEnabled = true;
-            btn_finale_1.Content = btn_semi_2.Content;
-            btn_semi_1.IsEnabled = false;
-            btn_semi_2.IsEnabled = false;
-        }
 
         private void btn_semi_3_Click(object sender, RoutedEventArgs e)
         {
+            Button b = (Button)sender;
+
+            btn_finale_2.Content = b.Content;
+            btn_finale_2.Visibility = Visibility.Visible;
             btn_finale_2.IsEnabled = true;
-            btn_finale_2.Content = btn_semi_3.Content;
             btn_semi_3.IsEnabled = false;
             btn_semi_4.IsEnabled = false;
         }
 
-        private void btn_semi_4_Click(object sender, RoutedEventArgs e)
-        {
-            btn_finale_2.IsEnabled = true;
-            btn_finale_2.Content = btn_semi_4.Content;
-            btn_semi_3.IsEnabled = false;
-            btn_semi_4.IsEnabled = false;
-        }
 
         private void btn_finale_1_Click(object sender, RoutedEventArgs e)
         {
-            btn_vincitore.Content = btn_finale_1.Content;
+            Button b = (Button)sender;
+
+            btn_vincitore.Content = b.Content;
             btn_finale_1.IsEnabled = false;
             btn_finale_2.IsEnabled = false;
             MessageBox.Show("Vince la Squadra [ " + btn_vincitore.Content + " ]");
+
+            StreamWriter sw = new StreamWriter("Vincitori.txt", true);
+
+            sw.WriteLine(btn_vincitore.Content);
+
+            sw.Close();
         }
 
-        private void btn_finale_2_Click(object sender, RoutedEventArgs e)
-        {
-            btn_vincitore.Content = btn_finale_2.Content;
-            btn_finale_1.IsEnabled = false;
-            btn_finale_2.IsEnabled = false;
-            MessageBox.Show("Vince la Squadra [ " + btn_vincitore.Content + " ]");
-        }
     }
 }
