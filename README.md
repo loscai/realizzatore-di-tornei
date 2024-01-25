@@ -52,4 +52,4 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 5) Incolla il link della repository ed esegui il programma / Paste the repository link and run the program;
 
 # FUNZIONAMENTO/RUNNING PROGRAM:
-!["Funzionamento"](funzionamento.gif)
+!["Funzionamento"](images/funzionamento.gif )
