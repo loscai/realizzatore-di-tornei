@@ -50,3 +50,6 @@ Richiedere all’utente di inserire tramite un’interfaccia grafica delle squad
 
 4) Dopo esserti assicurato di avere il pacchetto installato, apri Visual Studio 2022 e clicca il bottone "Clona Repository" / After making sure you have the package installed, open Visual Studio 2022 and click the "Clone Repository" button;
 5) Incolla il link della repository ed esegui il programma / Paste the repository link and run the program;
+
+# FUNZIONAMENTO/RUNNING PROGRAM:
+!["Funzionamento"](funzionamento.gif)

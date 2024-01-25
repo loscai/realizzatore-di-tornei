@@ -118,7 +118,7 @@ namespace realizzatore_di_tornei
 
                     for (int i = 0; i < n; i++)
                     {
-                        semifinali[i].Content = squadraList[i].Nome;
+                        semifinali[i].Content = squadraList[i].ToString();
                     }
 
                     for (int i = 0; i < 16; i++)
@@ -149,7 +149,7 @@ namespace realizzatore_di_tornei
                         {
                             quarti[i].IsEnabled = true;
                             quarti[i].Visibility = Visibility.Visible;
-                            quarti[i].Content = squadraList[i].Nome;
+                            quarti[i].Content = squadraList[i].ToString();
                            
                             if (i < 4)
                             {
@@ -169,7 +169,7 @@ namespace realizzatore_di_tornei
                 case 16:
                     for (int i = 0; i < n; i++)
                     {
-                        ottavi[i].Content = squadraList[i].Nome;
+                        ottavi[i].Content = squadraList[i].ToString();
                         if(i < 8)
                         {
                             quarti[i].IsEnabled=false;
@@ -192,6 +192,10 @@ namespace realizzatore_di_tornei
         private void btn_ottavi_1_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
+
+            ImpostaPunti iP = new ImpostaPunti(1, squadraList);
+
+            iP.ShowDialog();
 
             btn_quarti_1.Content = b.Content;
             btn_quarti_1.Visibility = Visibility.Visible;

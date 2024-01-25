@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:realizzatore_di_tornei"
         mc:Ignorable="d"
         Title="Realizzatore di tornei by Christian Colombo®" Height="450" Width="652">
-    <Grid Background="#FFAAC6D2">
+    <Grid Background="#FF65ACCB">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="188*"/>
             <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="453*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listbox_squadre" HorizontalAlignment="Center" Height="414" VerticalAlignment="Center" Width="188" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="Black" BorderThickness="1,1,10,1" Background="#FFAAC6D2" SelectionChanged="listbox_squadre_SelectionChanged"/>
+        <ListBox x:Name="listbox_squadre" HorizontalAlignment="Center" Height="414" VerticalAlignment="Center" Width="188" d:ItemsSource="{d:SampleData ItemCount=5}" BorderThickness="1,1,10,1" Background="White" SelectionChanged="listbox_squadre_SelectionChanged"/>
         <Button x:Name="add_sq_button" Content="Aggiungi Squadra" HorizontalAlignment="Left" Height="48" Margin="0,10,0,0" VerticalAlignment="Top" Width="122" Click="add_sq_button_Click" Grid.Column="2"/>
         <Label Content="Nome competizione:" HorizontalAlignment="Center" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="130" Grid.Column="2"/>
         <TextBox x:Name="nome_torneo_txtbox" HorizontalAlignment="Left" Margin="284,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="16" Grid.Column="2"/>

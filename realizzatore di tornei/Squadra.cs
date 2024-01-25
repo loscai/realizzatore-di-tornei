@@ -9,7 +9,10 @@ namespace realizzatore_di_tornei
     public class Squadra
     {
         private String nome;
+
+        private int puntiFatti;
         public string Nome { get => nome; set => nome = value; }
+        public int PuntiFatti { get => puntiFatti; set => puntiFatti = value; }
 
         public Squadra(string nome)
         {
