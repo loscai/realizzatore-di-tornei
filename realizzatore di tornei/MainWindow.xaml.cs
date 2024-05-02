@@ -144,11 +144,13 @@ namespace realizzatore_di_tornei
 
             OpenFileDialog ofd = new OpenFileDialog();
 
-            
+
 
 
             if (ofd.ShowDialog() == true)
                 content = File.ReadAllText(ofd.FileName);
+            else
+                return;
 
             StreamReader sr = new StreamReader(ofd.SafeFileName);
 
