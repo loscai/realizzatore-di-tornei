@@ -81,7 +81,7 @@ namespace realizzatore_di_tornei
             {
                 SchermataFinale sf;
 
-                sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false,nome_torneo_txtbox.Text);
+                sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false);
                 
                 this.Hide();
 

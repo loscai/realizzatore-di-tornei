@@ -38,8 +38,7 @@ namespace realizzatore_di_tornei
         int nSquadre;
         List<Squadra> squadraList;
         bool isTabellone;
-        String nomeTorneo;
-        public SchermataFinale(String titolo, int nSquadre, List<Squadra> squadraList, bool isTabellone, String nomeTorneo)
+        public SchermataFinale(String titolo, int nSquadre, List<Squadra> squadraList, bool isTabellone)
         {
             InitializeComponent();
 
@@ -47,8 +46,6 @@ namespace realizzatore_di_tornei
             this.squadraList = squadraList;
             this.nSquadre = nSquadre;
             this.isTabellone = isTabellone;
-            this.nomeTorneo = nomeTorneo;
-
             this.nCaselleTotali = (nSquadre * 2) - 1;
 
             ottavi[0] = btn_ottavi_1;
@@ -372,7 +369,7 @@ namespace realizzatore_di_tornei
 
             StreamWriter sw = new StreamWriter("Vincitori.txt", true);
 
-            sw.WriteLine("La Squadra vincitrice del torneo: [ " + this.nomeTorneo + " ] è [ "+ btn_vincitore.Content + "] - " + DateTime.Now);
+            sw.WriteLine("La Squadra vincitrice del torneo: [ " + this.Title + " ] è [ "+ btn_vincitore.Content + "] - " + DateTime.Now);
 
             sw.Close();
         }
