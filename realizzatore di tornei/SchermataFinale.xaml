@@ -29,8 +29,8 @@
         </Button>
         <Button x:Name="btn_semi_1" Content="" HorizontalAlignment="Center" Margin="0,73,0,682" Width="128" Click="btn_semi_1_Click" Height="20"/>
         <Button x:Name="btn_semi_2" Content="" HorizontalAlignment="Center" Margin="0,285,0,470" Width="128" Click="btn_semi_1_Click" Height="20"/>
-        <Button x:Name="btn_semi_3" Content="" HorizontalAlignment="Center" Margin="0,676,0,79" Width="128" Click="btn_semi_3_Click" Height="20"/>
-        <Button x:Name="btn_semi_4" Content="" HorizontalAlignment="Center" Margin="0,475,0,0" Width="128" Height="20" VerticalAlignment="Top" Click="btn_semi_3_Click"/>
+        <Button x:Name="btn_semi_3" Content="" HorizontalAlignment="Center" Margin="0,482,0,273" Width="128" Click="btn_semi_3_Click" Height="20"/>
+        <Button x:Name="btn_semi_4" Content="" HorizontalAlignment="Center" Margin="0,683,0,0" Width="128" Height="20" VerticalAlignment="Top" Click="btn_semi_3_Click"/>
         <Button x:Name="btn_finale_1" Content="" HorizontalAlignment="Left" Margin="635,187,0,568" Width="128" Click="btn_finale_1_Click" Height="20"/>
         <Button x:Name="btn_finale_2" Content="" HorizontalAlignment="Left" Margin="635,577,0,178" Width="128" Click="btn_finale_1_Click" Height="20"/>
         <Button x:Name="btn_vincitore" Content="" HorizontalAlignment="Left" Width="178" IsEnabled="False" Height="19" VerticalAlignment="Bottom" Margin="811,0,0,374"/>

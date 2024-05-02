@@ -58,9 +58,7 @@ namespace realizzatore_di_tornei
             if (listbox_squadre.Items.Count > 0 && listbox_squadre.SelectedItem != null)
             {
                 elimina_btn.IsEnabled = true;
-                modifica_nome_btn.IsEnabled = true;
-                nome_squadra_txtbox.Text = squadraList[listbox_squadre.SelectedIndex].Nome;
-            }
+                modifica_nome_btn.IsEnabled = true;            }
             else
             {
                 listbox_squadre.SelectedIndex = 0;
@@ -83,7 +81,7 @@ namespace realizzatore_di_tornei
             {
                 SchermataFinale sf;
 
-                sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false);
+                sf = new SchermataFinale(nome_torneo_txtbox.Text, listbox_squadre.Items.Count, squadraList, false,nome_torneo_txtbox.Text);
                 
                 this.Hide();
 
@@ -114,7 +112,6 @@ namespace realizzatore_di_tornei
             squadraList.Clear();
 
             elimina_btn.IsEnabled = false;
-            nome_squadra_txtbox.Text = string.Empty;
         }
 
 
