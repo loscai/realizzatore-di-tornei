@@ -22,13 +22,11 @@ namespace realizzatore_di_tornei
         Squadra sq1;
         Squadra sq2;
 
-        public Squadra Sq1 { get => sq1; set => sq1 = value; }
-        public Squadra Sq2 { get => sq2; set => sq2 = value; }
         public ImpostaPunti(Squadra sq1, Squadra sq2)
         {
             InitializeComponent();
-            Sq1 = sq1;
-            Sq2 = sq2;
+            this.sq1 = sq1;
+            this.sq2 = sq2;
         }
 
 
@@ -48,15 +46,15 @@ namespace realizzatore_di_tornei
                 int ris2 = Int32.Parse(txtbox_punti_sq2.Text);
                 if (ris1 != ris2)
                 {
-                    Sq1.PuntiFatti = ris1;
-                    Sq2.PuntiFatti = ris2;
+                    this.sq1.PuntiFatti = ris1;
+                    this.sq2.PuntiFatti = ris2;
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Le partite non possonon finire con un pareggio");
                     txtbox_punti_sq1.Text = string.Empty;
                     txtbox_punti_sq2.Text = string.Empty;
-                    this.Close();
                 }
             }
         }

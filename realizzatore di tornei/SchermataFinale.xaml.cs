@@ -192,11 +192,17 @@ namespace realizzatore_di_tornei
         {
             Button b = (Button)sender;
 
-            ImpostaPunti iP = new ImpostaPunti(squadraList[0], squadraList[1]);
+            Squadra sq1 = squadraList[0];
+            Squadra sq2 = squadraList[1];
+
+            int punti_sq1 = sq1.PuntiFatti;
+            int punti_sq2 = sq2.PuntiFatti;
+
+            ImpostaPunti iP = new ImpostaPunti(sq1, sq2);
 
             iP.ShowDialog();
 
-            MessageBox.Show("Risultato: " + btn_ottavi_1.Content + " " + squadraList[0].PuntiFatti + " - " +btn_ottavi_2.Content + " " + squadraList[0].PuntiFatti);
+            MessageBox.Show(btn_ottavi_1.Content + ": " + punti_sq1 + " - " +btn_ottavi_2.Content + ": " + punti_sq2);
 
             btn_quarti_1.Content = b.Content;
             btn_quarti_1.Visibility = Visibility.Visible;
@@ -209,6 +215,18 @@ namespace realizzatore_di_tornei
         private void btn_ottavi_3_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
+
+            Squadra sq1 = squadraList[2];
+            Squadra sq2 = squadraList[3];
+
+            int punti_sq1 = sq1.PuntiFatti;
+            int punti_sq2 = sq2.PuntiFatti;
+
+            ImpostaPunti iP = new ImpostaPunti(sq1, sq2);
+
+            iP.ShowDialog();
+
+            MessageBox.Show(sq1.ToString() + ": " + punti_sq1 + " - " + sq2.ToString() + ": " + punti_sq2);
 
             btn_quarti_2.Content = b.Content;
             btn_quarti_2.Visibility = Visibility.Visible;
