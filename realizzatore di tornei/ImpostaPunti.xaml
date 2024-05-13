@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="ImpostaPunti" Height="450" Width="400">
     <Grid Width="400">
-        <Label Content="Punteggio squadra 1: " HorizontalAlignment="Left" Height="28" Margin="10,43,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label Content="Punteggio squadra 2: " HorizontalAlignment="Left" Height="28" Margin="10,71,0,0" VerticalAlignment="Top" Width="128"/>
-        <TextBox x:Name="txtbox_punti_sq1" HorizontalAlignment="Left" Height="28" Margin="143,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
-        <TextBox x:Name="txtbox_punti_sq2" HorizontalAlignment="Left" Height="28" Margin="143,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Punteggio:" HorizontalAlignment="Center" Height="28" Margin="0,10,0,0" VerticalAlignment="Top" Width="84"/>
+        <TextBox x:Name="txtbox_punti_sq1" HorizontalAlignment="Left" Height="28" Margin="101,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="txtbox_punti_sq2" HorizontalAlignment="Left" Height="28" Margin="215,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btn_invia" Content="Invia" HorizontalAlignment="Center" Height="81" Margin="0,303,0,0" VerticalAlignment="Top" Width="230" Click="btn_invia_Click"/>
+        <Label Content="-" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

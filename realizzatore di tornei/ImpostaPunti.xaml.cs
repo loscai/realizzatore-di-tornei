@@ -19,38 +19,45 @@ namespace realizzatore_di_tornei
     /// </summary>
     public partial class ImpostaPunti : Window
     {
-        int indiceVettore;
-        List<Squadra> v;
+        Squadra sq1;
+        Squadra sq2;
 
-        public ImpostaPunti(int indiceVettore, List<Squadra> v)
+        public Squadra Sq1 { get => sq1; set => sq1 = value; }
+        public Squadra Sq2 { get => sq2; set => sq2 = value; }
+        public ImpostaPunti(Squadra sq1, Squadra sq2)
         {
             InitializeComponent();
-            this.indiceVettore = indiceVettore;
-            this.v = v;
+            Sq1 = sq1;
+            Sq2 = sq2;
         }
+
 
         private void btn_invia_Click(object sender, RoutedEventArgs e)
         {
+            //variabile a caso che uso nel TryParse anche se non so bene a cosa serva :)
             int numero;
 
             //controllo sulle textbox
             if (!Int32.TryParse(txtbox_punti_sq1.Text, out numero) || !Int32.TryParse(txtbox_punti_sq2.Text, out numero))
             {
-                MessageBox.Show("Numero non valido");
+                MessageBox.Show("Risultato non valido");
             }
             else
             {
-                if(indiceVettore %2  == 0)
+                int ris1 = Int32.Parse(txtbox_punti_sq1.Text);
+                int ris2 = Int32.Parse(txtbox_punti_sq2.Text);
+                if (ris1 != ris2)
                 {
-                    v[indiceVettore - 1].PuntiFatti = Int32.Parse(txtbox_punti_sq1.Text);
-                    v[indiceVettore].PuntiFatti = Int32.Parse(txtbox_punti_sq2.Text);
+                    Sq1.PuntiFatti = ris1;
+                    Sq2.PuntiFatti = ris2;
                 }
                 else
                 {
-                    v[indiceVettore].PuntiFatti = Int32.Parse(txtbox_punti_sq1.Text);
-                    v[indiceVettore + 1].PuntiFatti = Int32.Parse(txtbox_punti_sq2.Text);
+                    MessageBox.Show("Le partite non possonon finire con un pareggio");
+                    txtbox_punti_sq1.Text = string.Empty;
+                    txtbox_punti_sq2.Text = string.Empty;
+                    this.Close();
                 }
-                this.Close();
             }
         }
     }

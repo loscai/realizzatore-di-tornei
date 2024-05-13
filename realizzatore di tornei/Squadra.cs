@@ -17,6 +17,7 @@ namespace realizzatore_di_tornei
         public Squadra(string nome)
         {
             this.nome = nome;
+            this.puntiFatti = 0;
         }
 
         public override string ToString()

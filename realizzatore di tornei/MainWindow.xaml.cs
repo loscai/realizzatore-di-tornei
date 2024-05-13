@@ -26,7 +26,7 @@ namespace realizzatore_di_tornei
     
     public partial class MainWindow : Window
     {
-        const int maxNumeSquadre = 16;
+        const int maxNumSquadre = 16;
         List <Squadra> squadraList = new List<Squadra>();
         public MainWindow()
         {
@@ -35,7 +35,7 @@ namespace realizzatore_di_tornei
 
         private void add_sq_button_Click(object sender, RoutedEventArgs e)
         {
-            if (listbox_squadre.Items.Count < maxNumeSquadre)
+            if (listbox_squadre.Items.Count < maxNumSquadre)
             {
                 addSquadra a = new addSquadra();
 
@@ -58,7 +58,8 @@ namespace realizzatore_di_tornei
             if (listbox_squadre.Items.Count > 0 && listbox_squadre.SelectedItem != null)
             {
                 elimina_btn.IsEnabled = true;
-                modifica_nome_btn.IsEnabled = true;            }
+                modifica_nome_btn.IsEnabled = true;            
+            }
             else
             {
                 listbox_squadre.SelectedIndex = 0;
@@ -135,13 +136,9 @@ namespace realizzatore_di_tornei
 
         private void carica_btn_Click(object sender, RoutedEventArgs e)
         {
-            string content = "";
-
-
+            string content;
 
             OpenFileDialog ofd = new OpenFileDialog();
-
-
 
 
             if (ofd.ShowDialog() == true)
@@ -160,7 +157,10 @@ namespace realizzatore_di_tornei
 
             while (!sr.EndOfStream)
             {
-                string nomeSquadra = sr.ReadLine().Replace(';',' ');
+
+                String rigaAttuale = sr.ReadLine();
+
+                String nomeSquadra = rigaAttuale.Replace(';',' ');
 
 
                 squadraList.Add(new Squadra(nomeSquadra));

@@ -192,9 +192,11 @@ namespace realizzatore_di_tornei
         {
             Button b = (Button)sender;
 
-            //ImpostaPunti iP = new ImpostaPunti(1, squadraList);
+            ImpostaPunti iP = new ImpostaPunti(squadraList[0], squadraList[1]);
 
-            //iP.ShowDialog();
+            iP.ShowDialog();
+
+            MessageBox.Show("Risultato: " + btn_ottavi_1.Content + " " + squadraList[0].PuntiFatti + " - " +btn_ottavi_2.Content + " " + squadraList[0].PuntiFatti);
 
             btn_quarti_1.Content = b.Content;
             btn_quarti_1.Visibility = Visibility.Visible;
