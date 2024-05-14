@@ -149,7 +149,7 @@ namespace realizzatore_di_tornei
                             quarti[i].IsEnabled = true;
                             quarti[i].Visibility = Visibility.Visible;
                             quarti[i].Content = squadraList[i].ToString();
-                           
+
                             if (i < 4)
                             {
                                 semifinali[i].IsEnabled = false;
@@ -169,11 +169,11 @@ namespace realizzatore_di_tornei
                     for (int i = 0; i < n; i++)
                     {
                         ottavi[i].Content = squadraList[i].ToString();
-                        if(i < 8)
+                        if (i < 8)
                         {
-                            quarti[i].IsEnabled=false;
-                            quarti[i].Visibility=Visibility.Collapsed;
-                            if(i < 4)
+                            quarti[i].IsEnabled = false;
+                            quarti[i].Visibility = Visibility.Collapsed;
+                            if (i < 4)
                             {
                                 semifinali[i].IsEnabled = false;
                                 semifinali[i].Visibility = Visibility.Collapsed;
@@ -191,19 +191,6 @@ namespace realizzatore_di_tornei
         private void btn_ottavi_1_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
-
-            Squadra sq1 = squadraList[0];
-            Squadra sq2 = squadraList[1];
-
-            int punti_sq1 = sq1.PuntiFatti;
-            int punti_sq2 = sq2.PuntiFatti;
-
-            ImpostaPunti iP = new ImpostaPunti(sq1, sq2);
-
-            iP.ShowDialog();
-
-            MessageBox.Show(btn_ottavi_1.Content + ": " + punti_sq1 + " - " +btn_ottavi_2.Content + ": " + punti_sq2);
-
             btn_quarti_1.Content = b.Content;
             btn_quarti_1.Visibility = Visibility.Visible;
             btn_quarti_1.IsEnabled = true;
@@ -211,22 +198,9 @@ namespace realizzatore_di_tornei
             btn_ottavi_2.IsEnabled = false;
         }
 
-
         private void btn_ottavi_3_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
-
-            Squadra sq1 = squadraList[2];
-            Squadra sq2 = squadraList[3];
-
-            int punti_sq1 = sq1.PuntiFatti;
-            int punti_sq2 = sq2.PuntiFatti;
-
-            ImpostaPunti iP = new ImpostaPunti(sq1, sq2);
-
-            iP.ShowDialog();
-
-            MessageBox.Show(sq1.ToString() + ": " + punti_sq1 + " - " + sq2.ToString() + ": " + punti_sq2);
 
             btn_quarti_2.Content = b.Content;
             btn_quarti_2.Visibility = Visibility.Visible;
@@ -309,7 +283,7 @@ namespace realizzatore_di_tornei
         {
             Button b = (Button)sender;
 
-            
+
             btn_semi_1.Content = b.Content;
             btn_semi_1.Visibility = Visibility.Visible;
             btn_semi_1.IsEnabled = true;
@@ -357,7 +331,7 @@ namespace realizzatore_di_tornei
         private void btn_semi_1_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
-         
+
             btn_finale_1.Content = b.Content;
             btn_finale_1.Visibility = Visibility.Visible;
             btn_finale_1.IsEnabled = true;
@@ -389,7 +363,7 @@ namespace realizzatore_di_tornei
 
             StreamWriter sw = new StreamWriter("Vincitori.txt", true);
 
-            sw.WriteLine("La Squadra vincitrice del torneo: [ " + this.Title + " ] è [ "+ btn_vincitore.Content + "] - " + DateTime.Now);
+            sw.WriteLine("La Squadra vincitrice del torneo: [ " + this.Title + " ] è [ " + btn_vincitore.Content + "] - " + DateTime.Now);
 
             sw.Close();
         }
