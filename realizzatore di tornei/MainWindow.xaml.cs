@@ -26,13 +26,26 @@ namespace realizzatore_di_tornei
     
     public partial class MainWindow : Window
     {
+        #region Vars And Consts
+        /// <summary>
+        /// Costante che indica il massimo numero di squadre
+        /// </summary>
         const int maxNumSquadre = 16;
+        /// <summary>
+        /// Lista che contiene tutte le squadre
+        /// </summary>
         List <Squadra> squadraList = new List<Squadra>();
+
+        #endregion Vars And Consts
+
+        #region Constructors
         public MainWindow()
         {
             InitializeComponent();
         }
+        #endregion Constructors
 
+        #region Methods
         private void add_sq_button_Click(object sender, RoutedEventArgs e)
         {
             if (listbox_squadre.Items.Count < maxNumSquadre)
@@ -52,7 +65,6 @@ namespace realizzatore_di_tornei
                 MessageBox.Show("Numero Massimo di squadre raggiunto");
             }
         }
-
         private void listbox_squadre_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (listbox_squadre.Items.Count > 0 && listbox_squadre.SelectedItem != null)
@@ -157,16 +169,41 @@ namespace realizzatore_di_tornei
 
             while (!sr.EndOfStream)
             {
-
                 String rigaAttuale = sr.ReadLine();
 
                 String nomeSquadra = rigaAttuale.Replace(';',' ');
 
-
-                squadraList.Add(new Squadra(nomeSquadra));
-                listbox_squadre.Items.Add(squadraList[squadraList.Count-1]);
+                if (squadraList.Count < 16)
+                {
+                    if (checkNomi(nomeSquadra))
+                    {
+                        squadraList.Add(new Squadra(nomeSquadra));
+                        listbox_squadre.Items.Add(squadraList[squadraList.Count - 1]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Non si possono inserire nomi di squadre uguali,\r\n il doppione è: " + nomeSquadra);
+                    }
+                }
+                else
+                {
+                    sr.Close();
+                    return;
+                }
             }
             sr.Close ();
         }
+
+        public bool checkNomi(String nomeSquadra)
+        {
+            for (int i = 0; i < squadraList.Count; i++)
+            {
+                if(nomeSquadra == squadraList[i].Nome)
+                    return false;
+            }
+            return true;
+        }
+
+        #endregion Methods
     }
 }
