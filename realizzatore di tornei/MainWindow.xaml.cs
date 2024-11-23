@@ -197,10 +197,8 @@ namespace realizzatore_di_tornei
         public bool checkNomi(String nomeSquadra)
         {
             for (int i = 0; i < squadraList.Count; i++)
-            {
                 if(nomeSquadra == squadraList[i].Nome)
                     return false;
-            }
             return true;
         }
 
